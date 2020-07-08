@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>基于统计推荐的页面（平均评分最高的前100随机抽取20个进行评分）</title>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+
+
+</head>
+
+
+<body>
+
+<div id="top">
+    <span>电影评分</span>
+</div>
+<div id="movie-bar">
+    <h4>推荐给&nbsp;
+        <!-- 这里改成用户的信息 -->
+        您的电影
+        <!-- <%/*=acc.getUsername()*/%>您的</a>&nbsp;电影 -->
+    </h4>
+</div>
+<ul id="movie-items">
+
+    {%for i in random_best%}
+    <li class="movie-item" style="margin:0 auto">
+        <a href="#">
+            <p>{{i[1]}}</p>
+
+            <img src="{{i[3]}}" alt="" srcset="" class="movie-img">
+            <!--                     <img src="../static/images/1-900 (1994).jpg"  alt="" srcset="" class="movie-img">-->
+        </a>
+        <div>
+            <span class="movie-name"></span>
+            <span class="movie-rank">电影评分：{{i[2]}}</span>
+        </div>
+        <div>
+                            <span class="movie-summary">
+                            </span>
+        </div>
+        <form action="/submit" id="form{{i[0]}}" method="get">
+
+            <div>
+                            <span class="movie-id" >电影ID：<input value="{{i[0]}}" name="id" readonly style="background-color:transparent;border:0px"/>
+
+                            </span>
+            </div>
+            </div>
+            <div class="urate">
+                <p class="rt">用户评分:
+                    <input name="rat" type="radio" value="1">1
+                    <input name="rat" type="radio" value="2">2
+                    <input name="rat" type="radio" value="3">3
+                    <input name="rat" type="radio" value="4">4
+                    <input name="rat" type="radio" value="5" checked>5
+                </p>
+                 </div>
+        </form>
+
+    </li>
+    {%endfor%}
+</ul>
+                    <input type="button" name="button" id="btn" onclick="sdsd()" value="提交">
+
+<div class="float-clear">
+</div>
+<div>
+    <div id="middle">
+        <div class="form">
+            <div class="middle-tool">
+                <!-- <button type="button" id="flash">刷新</input> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bottom">
+</div>
+<script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+<script>
+
+<!--    $('#btn').click(function(){-->
+<!--        console.log('123')-->
+<!--        $("body").find("*[id*='form']").each(function(i,ele){-->
+<!--        var id = $ele.attr('id')-->
+<!--        alert(id)-->
+<!--    }-->
+<!--    })-->
+    function sdsd()
+    {
+        console.log('123')
+        $("body").find("*[id*='form']").each(function(i,ele){
+        var id = $(ele).attr('id')
+        alert(id)
+    })
+    }
+</script>
+</body>
+
+</html>

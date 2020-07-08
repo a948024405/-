@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+body {
+    width: 90%;
+    min-width: 1000px;
+    margin: auto;
+    padding: 0px;
+    border: 10px;
+    font-family: "Times New Roman", Georgia, Serif
+}
+
+button {
+    border-radius: 5px;
+    background: rgb(51, 122, 190);
+    border-color: rgb(60, 133, 200);
+}
+
+input {
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+body {
+    background-color: rgb(235, 245, 245);
+}
+
+#top {
+    background: rgb(51, 122, 183);
+    width: auto;
+    height: 35px;
+    border-radius: 2px;
+}
+
+#top>span {
+    color: #fff;
+    line-height: 35px;
+}
+
+#container {
+    height: 80%;
+    border-radius: 20px;
+}
+
+#middle {
+    background: rgb(59, 89, 119);
+    /* width: 1000px; */
+    /* margin: auto; */
+    height: 35px;
+    line-height: 35px;
+}
+
+#movie-items {
+    min-width: 800px;
+}
+
+.movie-items {
+    margin:0 auto;
+}
+.movie-name {
+    display: block;
+    font-size: 20px;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-rank {
+    display: block;
+    font-size: 15px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form {
+    color: rgb(252, 252, 252);
+    margin: 0 auto;
+    /* position: absolute; */
+}
+
+.middle-tool {
+    margin: auto;
+    display: block;
+    text-align: center;
+    line-height: 100%;
+}
+
+#flash {
+    margin: auto;
+    display: block;
+    color: rgb(222, 222, 222);
+    margin: 0px auto;
+    line-height: 28px;
+    display: inline-block;
+}
+
+.movie-summary {
+    word-break: break-all;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 13px;
+    line-height: 1.62;
+}
+
+div {
+    text-align: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+ul {
+    float: left;
+    list-style: none;
+}
+
+ul>li {
+    margin: 10px;
+    box-sizing: content-box;
+    max-width: 80%;
+    min-height: 200px;
+    border-width: 0px;
+    vertical-align: middle;
+    border: 0px;
+}
+
+.float-clear {
+    clear: both;
+}
+
+.movie-img {
+    max-width: 180px;
+    min-width: 100px;
+    /* width: 120px; */
+    margin: 0px 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 20px;
+    margin: 20px;
+    line-height: 20px;
+    /* border: 1px solid #99CC00; */
+    font-size: 18px;
+}
+
+ul>li {
+    display: block;
+    width: 50%;
+}
+
+.th {
+    background: #F1FADE;
+    font-weight: bold;
+    border-top: 1px
+}
